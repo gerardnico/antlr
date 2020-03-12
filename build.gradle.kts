@@ -36,3 +36,8 @@ application {
     // Define the main class for the application
     mainClassName = "com.gerardnico.antlr.App"
 }
+
+tasks.generateGrammarSource {
+    maxHeapSize = "64m"
+    arguments = arguments + listOf("-visitor", "-long-messages", "-package", "com.gerardnico.antlr.sqlite")
+}
