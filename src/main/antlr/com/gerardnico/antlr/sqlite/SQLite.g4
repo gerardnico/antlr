@@ -32,6 +32,10 @@
  */
 grammar SQLite;
 
+@header {
+package com.gerardnico.antlr.sqlite;
+}
+
 parse
  : ( sql_stmt_list | error )* EOF
  ;

@@ -39,5 +39,5 @@ application {
 
 tasks.generateGrammarSource {
     maxHeapSize = "64m"
-    arguments = arguments + listOf("-visitor", "-long-messages", "-package", "com.gerardnico.antlr.sqlite")
+    arguments = arguments + listOf("-visitor", "-long-messages")
 }
