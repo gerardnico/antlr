@@ -13,14 +13,29 @@ import java.util.stream.IntStream;
 public class Hello {
 
     public static void main(String[] args) {
+
+        // The input
         String input = "hello nico";
         ANTLRInputStream inputStream = new ANTLRInputStream(input);
+
+        // Lexer
         HelloLexer lexer = new HelloLexer(inputStream);
-        HelloParser parser = new HelloParser(new CommonTokenStream(lexer));
+
+        // Stream of token
+        CommonTokenStream commonTokenStream = new CommonTokenStream(lexer);
+
+        // Create the parser
+        HelloParser parser = new HelloParser(commonTokenStream);
 
         // Create the tree from the r parser rule
         ParseTree tree = parser.r();
+
+        // Print the tree
         printNode(tree, 0, Arrays.asList(parser.getRuleNames()));
+
+        // Or with the utility function to print the LISP-style tree
+        // equivalent to `grun Hello r --tree`
+        System.out.println(tree.toStringTree(parser));
 
     }
 

@@ -12,7 +12,7 @@ Every grammar is in [src/main/antlr](src/main/antlr)
    
 ## Demo
 
-  * Action (calculation) with a [Calculator](src/main/java/com/gerardnico/antlr/calculator/Calc.java)
+  * [Action](https://gerardnico.com/antlr/action) (calculation) with a [Calculator](src/main/java/com/gerardnico/antlr/calculator/Calc.java)
   * Tree visitor with [SQLite](src/test/java/com/gerardnico/antlr/sqlite/SqliteTest.java)
 
 
